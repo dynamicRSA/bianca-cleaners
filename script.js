@@ -68,19 +68,65 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-// ── CONTACT FORM (demo — logs to console, shows success message) ──
-const form = document.getElementById('contact-form');
+// ── SECURITY: Input sanitization ──
+function sanitize(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML.trim();
+}
+
+// ── SECURITY: Rate limiting (localStorage-based) ──
+const RATE_KEY    = 'bc_form_times';
+const RATE_MAX    = 5;
+const RATE_WINDOW = 30 * 60 * 1000; // 30 minutes
+
+function isRateLimited() {
+  try {
+    const now = Date.now();
+    let times = JSON.parse(localStorage.getItem(RATE_KEY) || '[]');
+    times = times.filter(t => now - t < RATE_WINDOW);
+    if (times.length >= RATE_MAX) return true;
+    times.push(now);
+    localStorage.setItem(RATE_KEY, JSON.stringify(times));
+    return false;
+  } catch {
+    return false; // fail open — don't block if localStorage unavailable
+  }
+}
+
+// ── CONTACT FORM (Formsubmit.co AJAX) ──
+const form       = document.getElementById('contact-form');
 const successMsg = document.getElementById('form-success');
-const submitBtn = document.getElementById('form-submit');
+const errorMsg   = document.getElementById('form-error');
+const submitBtn  = document.getElementById('form-submit');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  // Reset banners
+  successMsg.style.display = 'none';
+  successMsg.setAttribute('aria-hidden', 'true');
+  errorMsg.style.display   = 'none';
+  errorMsg.setAttribute('aria-hidden', 'true');
+
   // Basic validation
-  const name = document.getElementById('form-name').value.trim();
-  const email = document.getElementById('form-email').value.trim();
-  if (!name || !email) {
-    document.getElementById(name ? 'form-email' : 'form-name').focus();
+  const name  = sanitize(document.getElementById('form-name').value);
+  const email = sanitize(document.getElementById('form-email').value);
+
+  if (!name || name.length < 2) {
+    document.getElementById('form-name').focus();
+    return;
+  }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('form-email').focus();
+    return;
+  }
+
+  // Rate limit check
+  if (isRateLimited()) {
+    errorMsg.textContent = '⚠️ Too many submissions. Please try again later or call us directly.';
+    errorMsg.style.display = 'block';
+    errorMsg.setAttribute('aria-hidden', 'false');
     return;
   }
 
@@ -89,14 +135,32 @@ form.addEventListener('submit', async (e) => {
   submitBtn.querySelector('.btn-text').style.display = 'none';
   submitBtn.querySelector('.btn-loading').style.display = 'inline';
 
-  // Simulate async send (replace with actual fetch/mailto action)
-  await new Promise(r => setTimeout(r, 1400));
+  try {
+    const formData = new FormData(form);
 
-  // Show success
-  submitBtn.style.display = 'none';
-  successMsg.style.display = 'block';
-  successMsg.setAttribute('aria-hidden', 'false');
-  form.reset();
+    const response = await fetch('https://formsubmit.co/ajax/office@biancacleaners.co.za', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // Show success
+      submitBtn.style.display = 'none';
+      successMsg.style.display = 'block';
+      successMsg.setAttribute('aria-hidden', 'false');
+      form.reset();
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    // Show error
+    errorMsg.style.display = 'block';
+    errorMsg.setAttribute('aria-hidden', 'false');
+    submitBtn.disabled = false;
+    submitBtn.querySelector('.btn-text').style.display = 'inline';
+    submitBtn.querySelector('.btn-loading').style.display = 'none';
+  }
 });
 
 // ── SMOOTH SCROLL for all anchor links ──

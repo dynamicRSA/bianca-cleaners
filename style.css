@@ -229,6 +229,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .form-group textarea{resize:vertical;min-height:110px}
 .form-note{font-size:.8rem;color:var(--mid);text-align:center;margin-top:12px}
 .form-success{display:none;background:hsl(140,50%,94%);color:hsl(140,50%,28%);padding:14px 20px;border-radius:var(--radius-sm);font-size:.9rem;font-weight:600;text-align:center;margin-top:16px}
+.form-error{display:none;background:hsl(0,70%,95%);color:hsl(0,60%,38%);padding:14px 20px;border-radius:var(--radius-sm);font-size:.9rem;font-weight:600;text-align:center;margin-top:16px}
 
 /* ── FOOTER ── */
 .footer{background:var(--dark);padding:48px 0}
