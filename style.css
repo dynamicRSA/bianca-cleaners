@@ -192,8 +192,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .testimonials .section-tag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.75)}
 .testimonials .section-title{color:var(--white)}
 .testimonials .section-sub{color:rgba(255,255,255,.5)}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.google-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:6px 14px;font-size:.8rem;color:rgba(255,255,255,.7);margin-top:12px}
+.google-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:8px 18px;font-size:.85rem;color:rgba(255,255,255,.9);margin-top:12px;text-decoration:none;transition:all .25s ease}
+.google-badge:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.35);color:var(--white);transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.2)}
 .google-badge-stars{color:hsl(42,90%,55%);font-size:.85rem;letter-spacing:1px}
 .testimonial-card{background:var(--dark-2);border-radius:var(--radius);padding:32px;border:1px solid rgba(255,255,255,.06);opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .testimonial-card.visible{opacity:1;transform:translateY(0)}
