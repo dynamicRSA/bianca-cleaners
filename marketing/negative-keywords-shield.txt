@@ -1,0 +1,155 @@
+# ==============================================================================
+# BIANCA CLEANERS PRETORIA - NEGATIVE KEYWORDS SHIELD
+# ==============================================================================
+# PURPOSE: Copy and paste this entire list into Google Ads -> "Negative Keyword Lists"
+# and apply to your Search campaign. This guarantees your budget does NOT get wasted
+# on job seekers, maid/domestic worker queries, DIY/homemade advice, machine rentals,
+# or commercial municipal tenders.
+# ==============================================================================
+
+# ── JOBS / CAREERS / EMPLOYMENT (Biggest budget drain in South Africa) ──
+job
+jobs
+vacancy
+vacancies
+vacant
+career
+careers
+work
+employment
+hiring
+apply
+application
+cv
+resume
+salary
+salaries
+wage
+wages
+rate per hour
+hourly rate
+learnership
+internship
+intern
+recruitment
+recruiting
+agent
+agency
+staff wanted
+cleaner wanted
+domestic wanted
+maid wanted
+
+# ── DOMESTIC / MAIDS / CHAR SERVICES (Low margin / wrong target audience) ──
+maid
+maids
+char
+char service
+domestic
+domestic worker
+domestic workers
+housekeeper
+housekeeping
+nanny
+nannies
+au pair
+cook
+babysitter
+daily cleaner
+helper
+sweepstar
+sweep star
+
+# ── DIY / HOMEMADE / HOW-TO (Zero buying intent) ──
+how to
+diy
+do it yourself
+recipe
+recipes
+home remedy
+baking soda
+vinegar
+hydrogen peroxide
+dish soap
+clean myself
+tutorial
+guide
+video
+youtube
+wiki
+tips
+hack
+hacks
+remove stain with
+stain removal at home
+
+# ── RENTALS / MACHINE BUYING / HARDWARE (Not hiring a service) ──
+rent
+rental
+hire
+hiring a machine
+buy
+karcher
+rug doctor
+bissel
+bissell
+numatic
+george
+vacuum cleaner
+carpet machine
+shampooer
+steam cleaner hire
+build it
+leroy merlin
+makro
+game
+cash crusaders
+spare parts
+detergent
+solution
+chemicals
+
+# ── MUNICIPAL / TENDERS / PUBLIC SECTOR ──
+tender
+tenders
+rfq
+procurement
+government
+municipal
+municipality
+tshwane tender
+city of tshwane
+
+# ── CHEAP / FREE / COURSES ──
+free
+free quote scam
+cheap
+cheapest
+budget
+course
+courses
+training
+certificate
+school
+class
+classes
+
+# ── OTHER CITIES / PROVINCES (Location leaks) ──
+cape town
+durban
+sandton
+johannesburg
+joburg
+randburg
+roodepoort
+soweto
+bloemfontein
+port elizabeth
+gqeberha
+east london
+witbank
+nelspruit
+polokwane
+zimbabwe
+mozambique
+lesotho

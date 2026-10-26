@@ -94,6 +94,41 @@ function isRateLimited() {
   }
 }
 
+// ── CONVERSION TRACKING (Google Ads / GA4 / GTM) ──
+window.dataLayer = window.dataLayer || [];
+function trackConversion(eventName, params = {}) {
+  window.dataLayer.push({
+    event: eventName,
+    timestamp: new Date().toISOString(),
+    ...params
+  });
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
+}
+
+// Track WhatsApp Clicks (Inbound quote initiation)
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackConversion('contact_whatsapp', {
+      event_category: 'Lead',
+      event_label: link.getAttribute('data-service') || 'General WhatsApp CTA',
+      transport_type: 'beacon'
+    });
+  });
+});
+
+// Track Direct Phone Call Clicks
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackConversion('contact_phone', {
+      event_category: 'Lead',
+      event_label: 'Direct Call (083) 265-6019',
+      transport_type: 'beacon'
+    });
+  });
+});
+
 // ── CONTACT FORM (Formsubmit.co AJAX) ──
 const form       = document.getElementById('contact-form');
 const successMsg = document.getElementById('form-success');
@@ -145,6 +180,13 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
+      // Fire lead conversion event
+      trackConversion('generate_lead', {
+        event_category: 'Form',
+        event_label: 'Inbound Quote Form Submission',
+        value: 1
+      });
+
       // Show success
       submitBtn.style.display = 'none';
       successMsg.style.display = 'block';
@@ -174,3 +216,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
