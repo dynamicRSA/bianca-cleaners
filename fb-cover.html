@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bianca Cleaners Facebook Cover Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Lora:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      width: 1640px;
+      height: 624px;
+      overflow: hidden;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0b1f3a;
+      color: #ffffff;
+      position: relative;
+    }
+
+    /* Background image with gradient blend */
+    .bg-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 58%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      filter: saturate(1.1) brightness(0.92);
+    }
+    .bg-gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, 
+        #091729 0%, 
+        #0b1f3a 40%, 
+        rgba(11, 31, 58, 0.95) 54%, 
+        rgba(11, 31, 58, 0.5) 75%, 
+        rgba(11, 31, 58, 0.2) 100%
+      );
+    }
+    .bg-accent-glow {
+      position: absolute;
+      top: -80px;
+      left: 120px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, rgba(14, 165, 233, 0) 70%);
+      pointer-events: none;
+    }
+
+    /* Main container - Perfectly fitted for FB 1640x624 */
+    .banner-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 32px 50px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Top row: Brand & Years Pill */
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-badge {
+      width: 64px;
+      height: 64px;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.25);
+    }
+    .logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .brand-text h1 {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .brand-text h1 span {
+      color: #38bdf8;
+    }
+    .brand-text p {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+    .badge-pill {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      padding: 8px 20px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #f8fafc;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .badge-pill .gold-star {
+      color: #fbbf24;
+      font-size: 17px;
+    }
+
+    /* Middle row: Headline, Subheadline & Service Grid */
+    .middle-row {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      margin: 8px 0;
+    }
+    .left-col {
+      flex: 1.05;
+    }
+    .main-heading {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .main-heading em {
+      font-style: normal;
+      color: #38bdf8;
+      background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .sub-heading {
+      font-size: 16px;
+      line-height: 1.4;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+      max-width: 580px;
+    }
+
+    /* 4 Service Cards Grid */
+    .services-showcase {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .service-pill-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 10px 12px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .service-pill-card .icon {
+      font-size: 20px;
+    }
+    .service-pill-card .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .service-pill-card .desc {
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.3;
+    }
+
+    /* Right Photo Showcase (3 real work cards) */
+    .photo-stack {
+      flex: 1.15;
+      display: flex;
+      gap: 14px;
+      height: 250px;
+    }
+    .photo-card {
+      flex: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.22);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+      position: relative;
+    }
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      background: rgba(11, 31, 58, 0.9);
+      backdrop-filter: blur(8px);
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #ffffff;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* Bottom Bar: Location, Trust, Contact Pills */
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 12px 24px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .info-group {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-icon {
+      font-size: 18px;
+    }
+    .info-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .info-text span {
+      display: block;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* Action Buttons / Contact */
+    .contact-pills {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .action-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+    .action-wa {
+      background: #25D366;
+      color: #ffffff;
+    }
+    .action-web {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 15px;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Image & Gradients -->
+  <img src="og-banner.jpg" class="bg-image" alt="Clean Home" />
+  <div class="bg-gradient-overlay"></div>
+  <div class="bg-accent-glow"></div>
+
+  <!-- Content Container -->
+  <div class="banner-container">
+
+    <!-- Top Header -->
+    <div class="top-row">
+      <div class="brand-wrap">
+        <div class="logo-badge">
+          <img src="logo-original.jpg" alt="Bianca Cleaners Mascot" />
+        </div>
+        <div class="brand-text">
+          <h1>Bianca <span>Cleaners</span></h1>
+          <p>"Clean home, happy home."</p>
+        </div>
+      </div>
+      <div class="badge-pill">
+        <span class="gold-star">★</span>
+        <span>36+ Years in Pretoria &bull; Est. 1990</span>
+      </div>
+    </div>
+
+    <!-- Middle Hero & Services -->
+    <div class="middle-row">
+      <div class="left-col">
+        <h2 class="main-heading">
+          Pretoria's Trusted <em>Professional Cleaning</em> &amp; Maintenance
+        </h2>
+        <p class="sub-heading">
+          Permanent, background-vetted teams supervised on-site. High-power industrial steam extraction, deep domestic cleans, and garden care.
+        </p>
+
+        <!-- 4 Services -->
+        <div class="services-showcase">
+          <div class="service-pill-card">
+            <span class="icon">🧹</span>
+            <span class="title">Carpet &amp; Upholstery</span>
+            <span class="desc">Deep steam extraction, couches &amp; Persian rugs</span>
+          </div>
+          <div class="service-pill-card">
+            <span class="icon">🏠</span>
+            <span class="title">General Deep Cleans</span>
+            <span class="desc">Move-in / move-out &amp; seasonal spring cleans</span>
+          </div>
+          <div class="service-pill-card">
+            <span class="icon">🌿</span>
+            <span class="title">Garden Services</span>
+            <span class="desc">Lawn maintenance, tree felling &amp; cleanups</span>
+          </div>
+          <div class="service-pill-card">
+            <span class="icon">🧴</span>
+            <span class="title">Sanitizing</span>
+            <span class="desc">ULV misting, child &amp; pet-friendly disinfection</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Photos Showcase (No people, 100% spotless results) -->
+      <div class="photo-stack">
+        <div class="photo-card">
+          <img src="clean_couch_carpet.jpg" alt="Carpet & Upholstery Deep Cleaning" />
+          <div class="photo-tag">Carpets &amp; Couches</div>
+        </div>
+        <div class="photo-card">
+          <img src="service-general.png" alt="Spotless Bathroom & Home Deep Clean" />
+          <div class="photo-tag">Deep Home Cleans</div>
+        </div>
+        <div class="photo-card">
+          <img src="service-garden.png" alt="Manicured Garden Maintenance" />
+          <div class="photo-tag">Garden Services</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar: Areas & Contact -->
+    <div class="bottom-bar">
+      <div class="info-group">
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div class="info-text">
+            <strong>Based in Pretoria East</strong>
+            <span>Serving Greater Pretoria &amp; Centurion</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🛡️</span>
+          <div class="info-text">
+            <strong>Permanent Vetted Staff</strong>
+            <span>Owner-supervised operations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-pills">
+        <div class="action-pill action-wa">
+          <span>💬 WhatsApp / Call: (083) 265-6019</span>
+        </div>
+        <span class="action-web">biancacleaners.co.za</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
