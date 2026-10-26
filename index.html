@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
 
@@ -47,10 +47,21 @@
       </a>
       <nav class="nav-links" id="nav-links">
         <a href="#services" class="nav-link" id="nav-services">Services</a>
+        <a href="#areas" class="nav-link" id="nav-areas">Areas</a>
         <a href="#about" class="nav-link" id="nav-about">About</a>
         <a href="#testimonials" class="nav-link" id="nav-testimonials">Reviews</a>
-        <a href="#contact" class="nav-link nav-cta" id="nav-contact">Contact Us</a>
+        <a href="#faq" class="nav-link" id="nav-faq">FAQ</a>
+        <a href="#contact" class="nav-link nav-cta" id="nav-contact">Get a Quote</a>
       </nav>
+      <div class="nav-quick-actions">
+        <a href="tel:0832656019" class="nav-quick-btn nav-quick-phone" title="Call (083) 265-6019" aria-label="Call Bianca Cleaners">
+          <span>📞 (083) 265-6019</span>
+        </a>
+        <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quote%20for%20cleaning%20services." target="_blank" rel="noopener noreferrer" class="nav-quick-btn nav-quick-wa" title="WhatsApp Bianca Cleaners" aria-label="WhatsApp Bianca Cleaners">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -58,9 +69,15 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <a href="#services" class="mobile-link" id="mob-services">Services</a>
-      <a href="#about" class="mobile-link" id="mob-about">About</a>
+      <a href="#areas" class="mobile-link" id="mob-areas">Areas We Serve</a>
+      <a href="#about" class="mobile-link" id="mob-about">About Us</a>
       <a href="#testimonials" class="mobile-link" id="mob-testimonials">Reviews</a>
-      <a href="#contact" class="mobile-link" id="mob-contact">Contact Us</a>
+      <a href="#faq" class="mobile-link" id="mob-faq">FAQ</a>
+      <a href="#contact" class="mobile-link" id="mob-contact">Contact &amp; Quotes</a>
+      <div class="mobile-menu-actions">
+        <a href="tel:0832656019" class="btn btn-primary btn-sm btn-full">📞 Call (083) 265-6019</a>
+        <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quote." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-full">💬 Chat on WhatsApp</a>
+      </div>
     </div>
   </header>
 
@@ -74,17 +91,21 @@
       <div class="hero-text">
         <div class="hero-badge" id="hero-badge">
           <span class="badge-dot"></span>
-          36+ Years of Excellence
+          36+ Years of Excellence in Pretoria
         </div>
         <h1 class="hero-title" id="hero-title">
           Clean home,<br /><em>happy home.</em>
         </h1>
         <p class="hero-subtitle" id="hero-subtitle">
-          Pretoria's most trusted professional cleaning company. We bring industrial-grade results to your home, office, and garden.
+          Pretoria's trusted professional cleaning company since 1990. Industrial steam extraction for carpets &amp; upholstery, detailed home cleans, and garden care.
         </p>
         <div class="hero-actions" id="hero-actions">
-          <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Get a Free Quote</a>
-          <a href="#services" class="btn btn-ghost" id="hero-cta-secondary">Our Services</a>
+          <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20free%20quote%20for%20cleaning%20in%20Pretoria." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="hero-cta-whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp Quick Quote</span>
+          </a>
+          <a href="tel:0832656019" class="btn btn-ghost" id="hero-cta-call">📞 (083) 265-6019</a>
+          <a href="#services" class="btn btn-white" id="hero-cta-secondary">Our Services</a>
         </div>
         <div class="hero-stats" id="hero-stats">
           <div class="stat">
@@ -144,6 +165,11 @@
               <li>Persian &amp; heirloom rugs</li>
               <li>Office &amp; commercial carpets</li>
             </ul>
+            <div class="service-actions">
+              <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quote%20for%20Carpet%20%26%20Upholstery%20Cleaning." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm service-btn">
+                <span>💬 WhatsApp Carpet Quote</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -162,6 +188,11 @@
               <li>Kitchen &amp; oven detailing</li>
               <li>Regular weekly services</li>
             </ul>
+            <div class="service-actions">
+              <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quote%20for%20General%20House%20Cleaning." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm service-btn">
+                <span>💬 WhatsApp Cleaning Quote</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -180,6 +211,11 @@
               <li>Hedge &amp; shrub trimming</li>
               <li>Once-off &amp; scheduled visits</li>
             </ul>
+            <div class="service-actions">
+              <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quote%20for%20Garden%20Services." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm service-btn">
+                <span>💬 WhatsApp Garden Quote</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -196,10 +232,112 @@
               <li>Commercial &amp; residential</li>
               <li>Child &amp; pet safe solutions</li>
             </ul>
-            <a href="#contact" class="btn btn-primary btn-sm" id="service-sanitize-cta">Book a Sanitize</a>
+            <div class="service-actions">
+              <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quote%20for%20Sanitizing%20%26%20Disinfection." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm service-btn" id="service-sanitize-cta">
+                <span>💬 Book a Sanitize on WhatsApp</span>
+              </a>
+            </div>
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ AREAS WE SERVE ══════════════════════════════ -->
+  <section id="areas" class="areas section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Coverage</span>
+        <h2 class="section-title">Areas We Serve in <em>Pretoria &amp; Centurion</em></h2>
+        <p class="section-sub">We bring our mobile teams and industrial machinery directly to your home or office across Gauteng.</p>
+      </div>
+
+      <div class="areas-grid">
+        <div class="area-card" id="area-east">
+          <div class="area-header">
+            <span class="area-pin">📍</span>
+            <h3>Pretoria East</h3>
+          </div>
+          <p class="area-desc">Scheduled &amp; urgent callouts across popular East suburbs:</p>
+          <div class="area-tags">
+            <span class="area-tag">Faerie Glen</span>
+            <span class="area-tag">Garsfontein</span>
+            <span class="area-tag">Menlyn</span>
+            <span class="area-tag">Lynnwood</span>
+            <span class="area-tag">Moreleta Park</span>
+            <span class="area-tag">Constantia Park</span>
+            <span class="area-tag">Silver Lakes</span>
+            <span class="area-tag">Woodhill</span>
+            <span class="area-tag">Equestria</span>
+            <span class="area-tag">Elarduspark</span>
+            <span class="area-tag">Olympus</span>
+            <span class="area-tag">Wapadrand</span>
+          </div>
+        </div>
+
+        <div class="area-card" id="area-centurion">
+          <div class="area-header">
+            <span class="area-pin">📍</span>
+            <h3>Centurion</h3>
+          </div>
+          <p class="area-desc">Residential estates, complexes &amp; businesses:</p>
+          <div class="area-tags">
+            <span class="area-tag">Midstream</span>
+            <span class="area-tag">Irene</span>
+            <span class="area-tag">Eldoraigne</span>
+            <span class="area-tag">Lyttelton</span>
+            <span class="area-tag">Wierda Park</span>
+            <span class="area-tag">Rooihuiskraal</span>
+            <span class="area-tag">Clubview</span>
+            <span class="area-tag">Pierre van Ryneveld</span>
+            <span class="area-tag">Zwartkop</span>
+            <span class="area-tag">Highveld</span>
+          </div>
+        </div>
+
+        <div class="area-card" id="area-central">
+          <div class="area-header">
+            <span class="area-pin">📍</span>
+            <h3>Old East &amp; Central</h3>
+          </div>
+          <p class="area-desc">Pretoria established homes, embassies &amp; apartments:</p>
+          <div class="area-tags">
+            <span class="area-tag">Waterkloof</span>
+            <span class="area-tag">Brooklyn</span>
+            <span class="area-tag">Groenkloof</span>
+            <span class="area-tag">Menlo Park</span>
+            <span class="area-tag">Bailey's Muckleneuk</span>
+            <span class="area-tag">Hatfield</span>
+            <span class="area-tag">Arcadia</span>
+            <span class="area-tag">Sunnyside</span>
+          </div>
+        </div>
+
+        <div class="area-card" id="area-north">
+          <div class="area-header">
+            <span class="area-pin">📍</span>
+            <h3>Pretoria North &amp; Moot</h3>
+          </div>
+          <p class="area-desc">Family residences and garden cleanups in the North &amp; Moot:</p>
+          <div class="area-tags">
+            <span class="area-tag">Montana</span>
+            <span class="area-tag">Annlin</span>
+            <span class="area-tag">Wonderboom</span>
+            <span class="area-tag">Magalieskruin</span>
+            <span class="area-tag">Gezina</span>
+            <span class="area-tag">Rietfontein</span>
+            <span class="area-tag">Villieria</span>
+            <span class="area-tag">Queenswood</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="areas-footer">
+        <p>Don't see your specific suburb listed? <strong>We likely cover your neighborhood too!</strong></p>
+        <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20do%20you%20service%20my%20area%20in%20Pretoria%3F" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+          <span>💬 Confirm Your Suburb on WhatsApp</span>
+        </a>
       </div>
     </div>
   </section>
@@ -346,6 +484,86 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════ FAQ ══════════════════════════════ -->
+  <section id="faq" class="faq section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+        <p class="section-sub">Clear, honest answers about our cleaning process, equipment, and scheduling.</p>
+      </div>
+
+      <div class="faq-accordion" id="faq-accordion">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>How long do carpets and upholstery take to dry?</span>
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Drying times depend on weather conditions, ventilation, ambient humidity, and fabric thickness. On warm, sunny Pretoria days with good airflow, carpets and couches typically dry within a matter of hours. In colder or rainy weather, drying will take longer. We utilize high-power industrial extraction machines that draw out the vast majority of water during the wash cycle to keep drying time as short as realistically possible.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Do you bring your own equipment and cleaning supplies?</span>
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, completely. Our mobile team arrives fully equipped with industrial-grade extraction machines, specialized cleaning detergents, extension leads, ladders, and tools. All we need from your premises is access to a standard electrical outlet and tap water.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Are your cleaning detergents safe for pets and children?</span>
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Absolutely. We carefully select professional cleaning solutions that are non-toxic, eco-friendly, and biodegradable. Once clean and dry, all carpets, couches, and surfaces are 100% safe for dogs, cats, toddlers, and family members with allergies.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I trust your cleaning team in my home or office?</span>
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Trust and honesty have been the backbone of Bianca Cleaners for over 36 years. We do not use casual day-laborers; our cleaners are permanent, background-vetted staff members. In addition, our field operations are supervised on-site by Pankosi to guarantee utmost care, respect for your property, and quality control.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I get an estimate and how does payment work?</span>
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Quotes are 100% free with no obligation. The fastest method is to send photos or details of what you need cleaned via WhatsApp to <strong>(083) 265-6019</strong>, or give Rene and Shirley a call at the office. We accept convenient electronic bank transfers (EFT) and cash once the work is completed to your satisfaction.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Do you clean delicate Persian and heirloom rugs?</span>
+            <span class="faq-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. We have decades of experience treating delicate natural fibers, wool, silk blends, and authentic Persian rugs using customized low-moisture techniques and pH-neutral solutions to protect dye integrity and fiber softness.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-cta">
+        <p>Have a question that isn't answered here?</p>
+        <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <span>💬 Ask Rene &amp; Shirley on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════════════════ CTA BANNER ══════════════════════════════ -->
   <section class="cta-banner" id="cta-banner">
     <div class="container cta-inner">
@@ -378,7 +596,7 @@
             <div class="contact-item-icon">✉</div>
             <div>
               <strong>Email Us</strong>
-              <a href="mailto:office@biancacleaners.co.za">office@biancacleaners.co.za</a>
+              <a href="mailto:accounts@biancacleaners.co.za">accounts@biancacleaners.co.za</a>
             </div>
           </div>
 
@@ -425,24 +643,40 @@
               <input type="text" id="form-name" name="name" placeholder="Jane Smith" required autocomplete="name" maxlength="100" />
             </div>
             <div class="form-group">
-              <label for="form-phone">Phone Number</label>
+              <label for="form-phone">Phone / WhatsApp Number</label>
               <input type="tel" id="form-phone" name="phone" placeholder="082 000 0000" autocomplete="tel" maxlength="20" pattern="[0-9+\-\s()]{7,20}" />
             </div>
           </div>
-          <div class="form-group">
-            <label for="form-email">Email Address</label>
-            <input type="email" id="form-email" name="email" placeholder="jane@example.com" required autocomplete="email" maxlength="254" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-email">Email Address</label>
+              <input type="email" id="form-email" name="email" placeholder="jane@example.com" required autocomplete="email" maxlength="254" />
+            </div>
+            <div class="form-group">
+              <label for="form-suburb">Your Suburb / Area</label>
+              <input type="text" id="form-suburb" name="suburb" placeholder="e.g. Faerie Glen, Centurion" maxlength="100" />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="form-service">Service Required</label>
-            <select id="form-service" name="service">
-              <option value="" disabled selected>Select a service…</option>
-              <option value="Carpet &amp; Upholstery Cleaning">Carpet &amp; Upholstery Cleaning</option>
-              <option value="General Cleaning">General Cleaning</option>
-              <option value="Garden Services">Garden Services</option>
-              <option value="Sanitizing &amp; Disinfection">Sanitizing &amp; Disinfection</option>
-              <option value="Other / Not Sure">Other / Not Sure</option>
-            </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-service">Service Required</label>
+              <select id="form-service" name="service">
+                <option value="" disabled selected>Select a service…</option>
+                <option value="Carpet &amp; Upholstery Cleaning">Carpet &amp; Upholstery Cleaning</option>
+                <option value="General Cleaning">General Cleaning</option>
+                <option value="Garden Services">Garden Services</option>
+                <option value="Sanitizing &amp; Disinfection">Sanitizing &amp; Disinfection</option>
+                <option value="Other / Not Sure">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-pref">How would you like us to reply?</label>
+              <select id="form-pref" name="preferred_response">
+                <option value="WhatsApp" selected>WhatsApp message</option>
+                <option value="Phone Call">Phone call</option>
+                <option value="Email">Email</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
             <label for="form-message">Message</label>
@@ -475,13 +709,25 @@
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
         <a href="#about">About</a>
         <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
-      <p class="footer-copy">&copy; 2026 Bianca Cleaners. Pretoria, Gauteng, South Africa.</p>
+      <p class="footer-copy">&copy; 2026 Bianca Cleaners. Pretoria &amp; Centurion, Gauteng, South Africa.</p>
     </div>
   </footer>
+
+  <!-- ══════════════════════════════ FLOATING WHATSAPP ══════════════════════════════ -->
+  <aside class="wa-float" id="wa-float" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/27832656019?text=Hi%20Bianca%20Cleaners%2C%20I%20would%20like%20a%20quick%20quote%20for%20cleaning%20services." target="_blank" rel="noopener noreferrer" class="wa-float-btn" id="wa-float-btn" aria-label="Chat with Rene and Shirley on WhatsApp">
+      <div class="wa-pulse"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="wa-float-badge">1</span>
+      <span class="wa-float-tooltip">Chat with Rene &amp; Shirley on WhatsApp</span>
+    </a>
+  </aside>
 
   <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
   <script type="application/ld+json">
@@ -489,10 +735,10 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Bianca Cleaners",
-    "description": "Professional cleaning company with 36+ years experience in Pretoria, Gauteng. Carpet & upholstery cleaning, general cleaning, garden services, and sanitizing.",
+    "description": "Professional cleaning company with 36+ years experience in Pretoria and Centurion, Gauteng. Carpet & upholstery cleaning, general cleaning, garden services, and sanitizing.",
     "url": "https://biancacleaners.co.za",
     "telephone": "+27832656019",
-    "email": "office@biancacleaners.co.za",
+    "email": "accounts@biancacleaners.co.za",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pretoria",
@@ -513,12 +759,70 @@
         "closes": "13:00"
       }
     ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Pretoria"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Pretoria" },
+      { "@type": "City", "name": "Centurion" }
+    ],
     "sameAs": [
       "https://www.facebook.com/biancacleaners"
+    ]
+  }
+  </script>
+
+  <!-- ═══ JSON-LD FAQ SCHEMA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do carpets and upholstery take to dry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Drying times depend on weather conditions, ventilation, ambient humidity, and fabric thickness. On warm, sunny Pretoria days with good airflow, carpets and couches typically dry within a matter of hours. In colder or rainy weather, drying will take longer. We utilize high-power industrial extraction machines that draw out the vast majority of water during the wash cycle to keep drying time as short as realistically possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you bring your own equipment and cleaning supplies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely. Our mobile team arrives fully equipped with industrial-grade extraction machines, specialized cleaning detergents, extension leads, ladders, and tools. All we need from your premises is access to a standard electrical outlet and tap water."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your cleaning detergents safe for pets and children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We carefully select professional cleaning solutions that are non-toxic, eco-friendly, and biodegradable. Once clean and dry, all carpets, couches, and surfaces are 100% safe for dogs, cats, toddlers, and family members with allergies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I trust your cleaning team in my home or office?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trust and honesty have been the backbone of Bianca Cleaners for over 36 years. We do not use casual day-laborers; our cleaners are permanent, background-vetted staff members. In addition, our field operations are supervised on-site by Pankosi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get an estimate and how does payment work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quotes are 100% free with no obligation. The fastest method is to send photos or details via WhatsApp to (083) 265-6019, or give Rene and Shirley a call at the office. We accept convenient electronic bank transfers (EFT) and cash once the work is completed to your satisfaction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you clean delicate Persian and heirloom rugs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We have decades of experience treating delicate natural fibers, wool, silk blends, and authentic Persian rugs using customized low-moisture techniques and pH-neutral solutions to protect dye integrity and fiber softness."
+        }
+      }
     ]
   }
   </script>

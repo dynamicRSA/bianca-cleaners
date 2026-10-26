@@ -26,15 +26,15 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
-// ── SCROLL REVEAL (IntersectionObserver) ──
+// ── SCROLL REVEAL (IntersectionObserver with safe fallback) ──
+document.body.classList.add('js-animated');
 const revealEls = document.querySelectorAll(
-  '.service-card, .testimonial-card, .about-content, .reveal'
+  '.service-card, .testimonial-card, .about-content, .area-card, .faq-item, .reveal'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Stagger siblings a little
       const delay = entry.target.dataset.delay || 0;
       setTimeout(() => {
         entry.target.classList.add('visible');
@@ -42,10 +42,10 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.08, rootMargin: '80px 0px' });
 
 revealEls.forEach((el, i) => {
-  el.dataset.delay = (i % 4) * 80;
+  el.dataset.delay = (i % 3) * 60;
   revealObserver.observe(el);
 });
 
@@ -138,7 +138,7 @@ form.addEventListener('submit', async (e) => {
   try {
     const formData = new FormData(form);
 
-    const response = await fetch('https://formsubmit.co/ajax/office@biancacleaners.co.za', {
+    const response = await fetch('https://formsubmit.co/ajax/accounts@biancacleaners.co.za', {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
